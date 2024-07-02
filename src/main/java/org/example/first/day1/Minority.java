@@ -1,4 +1,4 @@
-package org.example.first;
+package org.example.first.day1;
 
 public class Minority {
 
@@ -34,7 +34,7 @@ public class Minority {
     // 변환된 n 진수 문자열에서 소수의 개수를 세는 함수
     private static int countPrimesIntKBase(String kBaseNumber) {
         System.out.println("kBaseNumber : " + kBaseNumber);
-        String[] split = kBaseNumber.split("0+");
+        String[] split = kBaseNumber.split("0");
         for (int i = 0; i < split.length; i++) {
             System.out.println(split[i]);
         }
@@ -82,7 +82,8 @@ public class Minority {
          */
 
         // 이미 위에서 2의 짝수 여부를 판단했기 때문이다.
-        for (int i = 3; i < Math.sqrt(number); i++) {
+        // 홀수만 검사
+        for (int i = 3; i < Math.sqrt(number); i += 3) {
             if (number % i == 0) {
                 return false;
             }
