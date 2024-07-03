@@ -88,6 +88,10 @@ public class Minority {
                 return false;
             }
         }
+
+
+        double sqrt = Math.sqrt(number);
+        System.out.println("제곱근 : " + sqrt);
         return true;
     }
 
